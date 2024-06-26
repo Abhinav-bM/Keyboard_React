@@ -26,8 +26,13 @@ const Key = ({
         setVal((prev) => (prev += " "));
         break;
       default:
-        setVal((prev) => prev + (isUpper ? alphabet : alphabet.toLowerCase()));
-        setIsUpper(false);
+        if (alphabet !== "Alt") {
+          setVal(
+            (prev) => prev + (isUpper ? alphabet : alphabet.toLowerCase())
+          );
+          setIsUpper(false);
+        }
+
         break;
     }
   };

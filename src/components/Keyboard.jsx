@@ -88,7 +88,7 @@ const Keyboard = () => {
               removeLastChar={removeLastChar}
               entered={entered}
               shift={shift}
-              isSpace = {key === 'Space'}
+              isSpace={key === "Space"}
             />
           ))}
         </div>
