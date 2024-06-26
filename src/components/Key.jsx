@@ -15,8 +15,9 @@ const Key = ({ alphabet, setVal, isUpper, setIsUpper, removeLastChar, entered, s
       case "CapsLock":
         setIsUpper(prev => !prev);
         break;
-      case "Space" 
-        setVal(prev => prev += " ")
+      case "Space":
+        setVal(prev => prev +=" ");
+        break;
       default:
         setVal(prev => prev + (isUpper ? alphabet : alphabet.toLowerCase()));
         setIsUpper(false);
