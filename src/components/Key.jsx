@@ -1,5 +1,6 @@
 
 const Key = ({ alphabet, setVal, isUpper, setIsUpper, removeLastChar, entered, shift }) => {
+
   const handleClick = () => {
     switch(alphabet) {
       case "Backspace":
@@ -14,6 +15,8 @@ const Key = ({ alphabet, setVal, isUpper, setIsUpper, removeLastChar, entered, s
       case "CapsLock":
         setIsUpper(prev => !prev);
         break;
+      case "Space" 
+        setVal(prev => prev += " ")
       default:
         setVal(prev => prev + (isUpper ? alphabet : alphabet.toLowerCase()));
         setIsUpper(false);
