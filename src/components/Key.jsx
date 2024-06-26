@@ -1,8 +1,15 @@
-
-const Key = ({ alphabet, setVal, isUpper, setIsUpper, removeLastChar, entered, shift }) => {
-
+const Key = ({
+  alphabet,
+  setVal,
+  isUpper,
+  setIsUpper,
+  removeLastChar,
+  entered,
+  shift,
+  isSpace,
+}) => {
   const handleClick = () => {
-    switch(alphabet) {
+    switch (alphabet) {
       case "Backspace":
         removeLastChar();
         break;
@@ -13,20 +20,23 @@ const Key = ({ alphabet, setVal, isUpper, setIsUpper, removeLastChar, entered, s
         shift();
         break;
       case "CapsLock":
-        setIsUpper(prev => !prev);
+        setIsUpper((prev) => !prev);
         break;
       case "Space":
-        setVal(prev => prev +=" ");
+        setVal((prev) => (prev += " "));
         break;
       default:
-        setVal(prev => prev + (isUpper ? alphabet : alphabet.toLowerCase()));
+        setVal((prev) => prev + (isUpper ? alphabet : alphabet.toLowerCase()));
         setIsUpper(false);
         break;
     }
   };
 
   return (
-    <button onClick={handleClick} className="key-button">
+    <button
+      onClick={handleClick}
+      className={`key-button ${isSpace ? "space-button" : ""}`}
+    >
       {alphabet}
     </button>
   );

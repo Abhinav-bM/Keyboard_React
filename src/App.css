@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   margin: 5px 0;
+  gap: 1px;
 }
 
 .entered-text {
@@ -24,14 +25,19 @@
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 .key-button:hover {
-  border: 1px solid rgb(96, 96, 238);
-  background-color: #e0e0e0;
+  border: 1.5px solid rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .key-button:active {
   background-color: #d0d0d0;
+}
+
+.space-button {
+  flex-grow: 4;
+  padding: 10px 100px;
 }

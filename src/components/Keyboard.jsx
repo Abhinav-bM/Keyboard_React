@@ -36,7 +36,7 @@ const Keyboard = () => {
       "Enter",
     ],
     ["Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "Shift"],
-    ["Control", "Null", "Alt", "Space", "Alt", "Null", "Menu", "Control"],
+    ["Control", "Alt", "Space", "Alt", "Control"],
   ];
 
   let [val, setVal] = useState("");
@@ -88,6 +88,7 @@ const Keyboard = () => {
               removeLastChar={removeLastChar}
               entered={entered}
               shift={shift}
+              isSpace = {key === 'Space'}
             />
           ))}
         </div>
