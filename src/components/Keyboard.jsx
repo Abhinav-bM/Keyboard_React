@@ -64,7 +64,7 @@ const Keyboard = () => {
           width: "34rem",
           height: "3rem",
           borderRadius: "5px",
-          padding: "2px 4px",
+          padding: "5px 10px",
           marginBottom: "10px",
           fontSize: "20px",
           display: "flex",
@@ -73,7 +73,7 @@ const Keyboard = () => {
       >
         {val}
       </div>
-      
+
       {enter && <p className="entered-text">{enter}</p>}
 
       {keyboard.map((row, rowIndex) => (
